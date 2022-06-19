@@ -6,7 +6,9 @@ public class Player
     public string Name { get; set; }
     public int GroupID { get; set; }
     public Group? Group { get; set; }
+    public int SuccesfulBets { get; set; }
+    public int AllAttempts { get; set; }
     public float Score { get; set; }
-    
 
+    
 }

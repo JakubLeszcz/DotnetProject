@@ -234,6 +234,9 @@ namespace WebApplication2.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("AllAttempts")
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("GroupID")
                         .HasColumnType("INTEGER");
 
@@ -243,6 +246,9 @@ namespace WebApplication2.Data.Migrations
 
                     b.Property<float>("Score")
                         .HasColumnType("REAL");
+
+                    b.Property<int>("SuccesfulBets")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("ID");
 

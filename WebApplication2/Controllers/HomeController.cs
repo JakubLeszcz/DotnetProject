@@ -43,6 +43,12 @@ public class HomeController : Controller
         }
         
         var items = await _context.Player.Where(l => l.GroupID == group_id).ToListAsync();
+        foreach (var player in items)
+        {
+            player.Score = (float)player.SuccesfulBets/ (float)player.AllAttempts;
+        }
+
+
         List<Player> SortedList = items.OrderByDescending(o=>o.Score).ToList();
         ViewData["groups"] = groups;
         return View(SortedList);
