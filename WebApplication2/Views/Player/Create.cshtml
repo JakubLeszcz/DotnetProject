@@ -18,13 +18,18 @@
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="GroupID" class="control-label">Group Name</label>
+                <label asp-for="GroupID" class="control-label"></label>
                 <select asp-for="GroupID" class ="form-control" asp-items="ViewBag.GroupID"></select>
             </div>
             <div class="form-group">
-                <label asp-for="Score" class="control-label"></label>
-                <input asp-for="Score" class="form-control" />
-                <span asp-validation-for="Score" class="text-danger"></span>
+                <label asp-for="SuccesfulBets" class="control-label"></label>
+                <input asp-for="SuccesfulBets" class="form-control" />
+                <span asp-validation-for="SuccesfulBets" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AllAttempts" class="control-label"></label>
+                <input asp-for="AllAttempts" class="form-control" />
+                <span asp-validation-for="AllAttempts" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

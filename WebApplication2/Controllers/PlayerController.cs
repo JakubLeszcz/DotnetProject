@@ -48,7 +48,7 @@ namespace WebApplication2.Controllers
         // GET: Player/Create
         public IActionResult Create()
         {
-            ViewData["GroupID"] = new SelectList(_context.Group, "ID", "Name");
+            ViewData["GroupID"] = new SelectList(_context.Group, "ID", "ID");
             return View();
         }
 
@@ -57,7 +57,7 @@ namespace WebApplication2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Name,GroupID,Score")] Player player)
+        public async Task<IActionResult> Create([Bind("ID,Name,GroupID,SuccesfulBets,AllAttempts,Score")] Player player)
         {
             if (ModelState.IsValid)
             {
@@ -91,7 +91,7 @@ namespace WebApplication2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Name,GroupID,Score")] Player player)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Name,GroupID,SuccesfulBets,AllAttempts,Score")] Player player)
         {
             if (id != player.ID)
             {

@@ -19,8 +19,12 @@
                 @Html.DisplayNameFor(model => model.Group)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Score)
+                @Html.DisplayNameFor(model => model.SuccesfulBets)
             </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AllAttempts)
+            </th>
+
             <th></th>
         </tr>
     </thead>
@@ -34,8 +38,12 @@
                 @Html.DisplayFor(modelItem => item.Group.ID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Score)
+                @Html.DisplayFor(modelItem => item.SuccesfulBets)
             </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AllAttempts)
+            </td>
+
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
