@@ -22,9 +22,34 @@
         margin-top: 30px;
         margin-bottom: 30px;
     }
+    .styled-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+    .styled-table thead tr {
+        background-color: #009879;
+        color: #ffffff;
+        text-align: left;
+    }
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+    
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+    
+    .styled-table tbody tr:last-of-type {
+        border-bottom: 2px solid #009879;
+    }
+
 </style>
 
-<div class="text-center">
+<div class="text-center" >
     <h1 class="display-4">Ranking</h1>
     
     <div class="groups">
@@ -33,11 +58,11 @@
             <button class="group-selector" onclick="changeGroup(@group.ID)">@group.Name</button>
         }
     </div>
-    <table class="table">
+    <table class="styled-table">
                 <thead>
                 <tr>
-                    <th width="60%">Name</th>
-                    <th width="20%">Score</th>
+                    <th width="100%">Name</th>
+                    <th width="100%">Score</th>
                 </tr>
                 
      @foreach (var item in Model)

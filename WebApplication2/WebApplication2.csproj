@@ -30,4 +30,11 @@
       <_ContentIncludedByDefault Remove="Views\Group\Index.cshtml" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Areas\PlayerController\Controllers" />
+      <Folder Include="Areas\PlayerController\Data" />
+      <Folder Include="Areas\PlayerController\Models" />
+      <Folder Include="Areas\PlayerController\Views" />
+    </ItemGroup>
+
 </Project>

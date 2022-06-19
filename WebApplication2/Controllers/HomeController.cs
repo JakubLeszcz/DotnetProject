@@ -45,7 +45,7 @@ public class HomeController : Controller
         var items = await _context.Player.Where(l => l.GroupID == group_id).ToListAsync();
         foreach (var player in items)
         {
-            player.Score = (float)player.SuccesfulBets/ (float)player.AllAttempts;
+            player.Score = (float)player.SuccessfulBets/ (float)player.AllAttempts;
         }
 
 

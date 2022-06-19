@@ -247,7 +247,7 @@ namespace WebApplication2.Data.Migrations
                     b.Property<float>("Score")
                         .HasColumnType("REAL");
 
-                    b.Property<int>("SuccesfulBets")
+                    b.Property<int>("SuccessfulBets")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("ID");
