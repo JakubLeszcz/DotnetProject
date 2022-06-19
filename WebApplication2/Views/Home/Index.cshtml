@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var groups = (List<Group>)ViewData["groups"];
+}
+
+<script>
+    function changeGroup(id) {
+        console.log(id);
+        //window.location.href = window.location.href + "?group=" + id;
+        var getUrl = window.location;
+        var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+        window.location.href = baseUrl + "?group_id=" + id;
+    }
+</script>
+
+<style>
+    .group-selector:hover{
+        background-color: white;
+    }
+    
+    .groups{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="display-4">Ranking</h1>
+    
+    <div class="groups">
+        @foreach (var group in groups)
+        {
+            <button class="group-selector" onclick="changeGroup(@group.ID)">@group.Name</button>
+        }
+    </div>
+    <table class="table">
+                <thead>
+                <tr>
+                    <th width="60%">Name</th>
+                    <th width="20%">Score</th>
+                </tr>
+                
+     @foreach (var item in Model)
+     {
+         <tr>
+             <td width="60%">@item.Name</td>
+             <td width="60%">@item.Score</td>
+         </tr>
+     }
+    </table>
+</div>

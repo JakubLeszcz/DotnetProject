@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>aspnet-WebApplication2-9AB9E39D-C7C7-4180-926E-B74E3B3190E2</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.6" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.6" />
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.6" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.6" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.6" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.6" />
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.6" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Player\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Player\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Player\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Player\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Player\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Group\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Group\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Group\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Group\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Group\Index.cshtml" />
+    </ItemGroup>
+
+</Project>
